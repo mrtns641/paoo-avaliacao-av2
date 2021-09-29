@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-form-field
+        appearance="fill">
+        <mat-label>Digite uma recomendação</mat-label>
+        <input 
+            matInput
+            type="text" 
+            [(ngModel)]="recomendacao"/>
+        <button 
+            *ngIf="recomendacao" 
+            matSuffix
+            mat-icon-button 
+            (click)="recomendacao=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field
+    appearance="fill">
+    <mat-label>Digite a descrição da sua recomendação</mat-label>
+    <input 
+        matInput
+        type="text" 
+        [(ngModel)]="descricao"/>
+    <button 
+        *ngIf="descricao" 
+        matSuffix
+        mat-icon-button 
+        (click)="descricao=''">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="onRecomendacaoInserida()">
+        Inserir Recomendação
+    </button>   
+</mat-card>
